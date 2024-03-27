@@ -1,0 +1,8 @@
+module derived_gates(Y1,Y2,A,B);
+input A,B;
+output Y1,Y2;
+assign Y1=A^B;
+assign Y2=~(A^B);
+endmodule
+
+
