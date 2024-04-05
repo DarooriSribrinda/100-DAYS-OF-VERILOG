@@ -1,0 +1,13 @@
+module rca_tb;
+reg [3:0] A,B;
+reg Cin;
+wire [3:0] S;
+wire C;
+rca dut(S,C,A,B,Cin);
+initial begin
+A=4'b0000; B=4'b1111;Cin=0;
+#10; A=4'b1110; B=4'b1011;Cin=1;
+#10;
+$stop;
+end
+endmodule

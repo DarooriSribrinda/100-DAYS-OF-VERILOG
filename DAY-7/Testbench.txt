@@ -1,0 +1,13 @@
+module hs_tb;
+reg X,Y;
+wire D,B;
+half_subtractor dut(D,B,X,Y);
+initial begin
+X=0;Y=0;
+#10; X=0;Y=1;
+#10; X=1;Y=0;
+#10; X=1;Y=1;
+#10;
+$finish;
+end
+endmodule

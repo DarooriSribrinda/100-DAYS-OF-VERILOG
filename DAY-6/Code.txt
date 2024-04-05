@@ -1,0 +1,8 @@
+module fa_with_ha(S,C,A,B,Cin);
+input A,B,Cin;
+output S,C;
+wire n1,n2,n3;
+half_adder ha1(n1,n2,A,B);
+half_adder ha2(S,n3,n1,Cin);
+assign C=n2|n3;
+endmodule
