@@ -1,0 +1,5 @@
+module demux1_2(Y1,Y2,S,I);
+input S,I;
+output Y1,Y2;
+assign {Y1,Y2}=S?{1'b0,I}:{I,1'b0};
+endmodule

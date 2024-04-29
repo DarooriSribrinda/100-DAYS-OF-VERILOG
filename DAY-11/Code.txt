@@ -1,0 +1,8 @@
+module comp_2b(G,E,L,A,B);
+input [1:0]A;
+input [1:0]B;
+output G,E,L;
+assign G= (A[1]&A[0]&~B[0])|(A[0]&~B[1]&~B[0])|(A[1]&~B[1]);
+assign E=(~(A[0]^B[0]))&(~(A[1]^B[1]));
+assign L= (~A[1]&~A[0]&B[0])|(~A[0]&B[1]&B[0])|(~A[1]&B[1]);
+endmodule

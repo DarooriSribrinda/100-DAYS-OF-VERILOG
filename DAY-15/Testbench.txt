@@ -1,0 +1,11 @@
+module demux_tb;
+reg S,I;
+wire Y1,Y2;
+demux1_2 dut(Y1,Y2,S,I);
+initial begin
+I=1; S=0;
+#10;S=1;
+#10;
+$finish;
+end
+endmodule

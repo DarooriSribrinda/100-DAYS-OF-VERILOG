@@ -1,0 +1,12 @@
+module mux_tb;
+reg [3:0]I;
+reg [1:0]S;
+wire Y;
+mux_4_1 dut(Y,I,S);
+initial begin
+I=4'b1001; S[1]=1; S[0]=0;
+#10;S[1]=1; S[0]=1;
+#10;
+$finish;
+end
+endmodule

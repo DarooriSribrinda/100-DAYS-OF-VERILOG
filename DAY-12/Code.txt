@@ -1,0 +1,12 @@
+module comp_4b(G,E,L,A,B);
+input [3:0]A,B;
+output G,E,L;
+wire w1,w2,w3,w4,w5,w6,T1,T2;
+comp_2b comp1(w1,w2,w3,A[3:2],B[3:2]);
+comp_2b comp2(w4,w5,w6,A[1:0],B[1:0]);
+and and1(E,w2,w5);
+and and2(T1,w2,w4);
+and and3(T2,w2,w6);
+or or1(G,w1,T1);
+or or2(L,w3,T2);
+endmodule
