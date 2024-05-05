@@ -1,0 +1,12 @@
+module decoder_tb;
+reg [1:0]I;
+reg En;
+wire [3:0]Y;
+decoder_2_4 dut(Y,I,En);
+initial begin
+I=2'b10;En=1;
+#10;I=2'b01;
+#10;En=0;
+#10;
+end
+endmodule

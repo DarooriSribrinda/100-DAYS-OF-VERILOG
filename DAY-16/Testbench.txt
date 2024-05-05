@@ -1,0 +1,13 @@
+module demux_tb; 
+wire [3:0] Y; 
+reg [1:0] A;
+reg din; 
+demux_1_4 dut(Y, A, din); 
+initial begin 
+din = 1;
+A[1] = 0; A[0] = 0; 
+ #1 A[1] = 0; A[0] = 1; 
+ #1 A[1] = 1; A[0] = 0;
+ #1 A[1] = 1; A[0] = 1; 
+end 
+endmodule
