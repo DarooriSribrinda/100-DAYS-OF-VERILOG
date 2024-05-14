@@ -1,0 +1,12 @@
+module d2BCD_tb;
+reg [9:0]I;
+wire A, B, C, D;
+dec_2_bcd dut(A,B,C,D,I);
+initial begin 
+I = 10'b0000000000;#10;
+I = 10'b0100000000;#10;
+I = 10'b0000000100;#10;
+I = 10'b0000010000;#10;
+$finish;
+end
+endmodule

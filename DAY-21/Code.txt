@@ -1,0 +1,8 @@
+module odd_parity(Y,A,B,C);
+input A,B,C;
+output Y;
+wire x;
+
+assign x=A^B;
+assign Y=~(x^C);
+endmodule

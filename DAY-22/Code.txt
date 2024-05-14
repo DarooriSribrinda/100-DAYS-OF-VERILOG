@@ -1,0 +1,7 @@
+module even_parity(Y,A,B,C);
+input A,B,C;
+output Y;
+wire x;
+assign x=A^C;
+assign Y=x^B;
+endmodule

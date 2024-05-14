@@ -1,0 +1,12 @@
+module o2b_tb;
+reg [2:0]I;
+wire Y1,Y2,Y3;
+oct_2_bin dut(Y1,Y2,Y3,I);
+initial begin
+I = 3'b000;#10;
+I = 3'b010;#10;
+I= 3'b100;#10;
+I= 3'b111;#10;
+$finish;
+end
+endmodule

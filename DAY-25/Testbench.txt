@@ -1,0 +1,12 @@
+module h2b_tb;
+reg [3:0] I;
+wire Y1,Y2,Y3,Y4;
+hex_2_bin dut(Y1,Y2,Y3,Y4,I);
+initial begin
+I = 4'h0; #10; 
+I = 4'hA; #10;
+I = 4'hB; #10; 
+I = 4'hF; #10;  
+$finish;
+end
+endmodule
