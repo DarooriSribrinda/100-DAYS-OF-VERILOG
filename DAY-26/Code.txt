@@ -1,0 +1,7 @@
+module bin_2_gray(Y1,Y2,Y3,A,B,C);
+input A, B, C;
+output Y1,Y2,Y3;
+and G1(Y1, A);
+xor G2(Y2, A, B);
+xor G3(Y3, B, C);
+endmodule

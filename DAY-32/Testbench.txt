@@ -1,0 +1,9 @@
+module d_tb;
+reg en,d;
+wire q;
+d_latch dut(q,d,en);
+initial begin
+en=0;d=2'b10;#10;
+en=1;d=2'b01;#10;
+end
+endmodule

@@ -1,0 +1,16 @@
+module csa_tb;
+  reg [3:0] x, y, z;
+  wire [4:0] s;
+  wire cout;
+
+  csa dut (x,y,z,s,cout);
+  initial begin
+    x = 4'b0000;
+    y = 4'b0000;
+    z = 4'b0000;
+    #10 x = 4'b0010;
+    #10 y = 4'b0011;
+    #10 z = 4'b0100;
+    #10 $stop;
+  end
+endmodule

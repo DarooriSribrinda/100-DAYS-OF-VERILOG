@@ -1,0 +1,8 @@
+module g2b(G3,G2,G1,G0,B3,B2,B1,B0);
+input G3,G2,G1,G0;
+output B3,B2,B1,B0;
+xor xor1(B0,G3,G2,G1,G0);
+xor xor2(B1,G3,G2,G1);
+xor xor3(B2,G3,G2);
+and and1(B3,G3);
+endmodule

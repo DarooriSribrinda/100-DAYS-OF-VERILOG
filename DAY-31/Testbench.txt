@@ -1,0 +1,14 @@
+module alu_tb;
+reg [3:0] a,b,opcode;
+wire [3:0] x,y;
+alu dut(x,y,a,b,opcode);
+initial begin
+a=4'b1011;b=4'b1011;opcode=4'b1001;#10;
+a=4'b0011;b=4'b1011;opcode=4'b0110;#10;
+a=4'b1010;opcode=4'b0000;#10;
+a=4'b1010;b=4'b1000;opcode=4'b1100;#10;
+a=4'b1001;opcode=4'b1111;#10;
+$finish;
+end
+endmodule
+

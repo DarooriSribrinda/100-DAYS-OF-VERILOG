@@ -1,0 +1,14 @@
+module tb;
+reg [7:0] In;
+reg [2:0] n;
+reg Lr;
+wire [7:0] Out;
+barrel_shifter dut(Out,In,Lr,n);
+initial begin
+In=8'b00000001; n=3'b010;Lr=0;#10;
+In=8'b00001111; n=3'b001;Lr=1;#10;
+In=8'b01100001; n=3'b011;Lr=1;#10;
+In=8'b00011000; n=3'b110;Lr=0;#10;
+end
+endmodule
+
